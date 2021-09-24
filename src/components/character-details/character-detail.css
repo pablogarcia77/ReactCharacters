@@ -1,0 +1,15 @@
+.chars{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    justify-content: space-around;
+}
+.picture{
+    height: 500px !important;
+    width: auto;
+}
+.select{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

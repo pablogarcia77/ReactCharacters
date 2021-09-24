@@ -1,0 +1,9 @@
+.item{
+    display: inline-block;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}

@@ -1,0 +1,11 @@
+.photo{
+    height: 300px;
+    width: auto;
+}
+.name{
+    text-align: center;
+}
+ul{
+    list-style: none;
+    display: inline-block;
+}

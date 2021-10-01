@@ -1,6 +1,7 @@
 {
     "Characters": [
         {   
+            "id": "1",
             "name": "Homero",
             "lastname": "Simpson",
             "age": 55,
@@ -10,6 +11,7 @@
             "City": "Springfield"
         },
         {   
+            "id": "2",
             "name": "Bart",
             "lastname": "Simpsons",
             "age": 10,
@@ -18,7 +20,8 @@
             "Friends": ["Milhouse"],
             "City": "Springfield"
         },
-        {
+        {   
+            "id": "3",
             "name": "Lisa",
             "lastname": "Simpsons",
             "age": 8,
@@ -27,7 +30,8 @@
             "Friends": ["Encias Sangrantes"],
             "City": "Springfield"
         },
-        {
+        {   
+            "id": "4",
             "name": "Barney",
             "lastname": "Gomez",
             "age": 54,
@@ -36,13 +40,64 @@
             "Friends": ["Homero","Lenny","Carl","Moe"],
             "City": "Springfield"
         },
-        {
+        {   
+            "id": "5",
             "name": "Nelson",
             "lastname": "Muntz",
             "age": 11,
             "photo": "https://i.pinimg.com/originals/bc/16/f9/bc16f9cb28b81f0d0a9e60bace7601cd.png",
             "Best Phrase": "Ja! Ja!",
             "Friends": ["Jimbo","Dolph","Kearney"],
+            "City": "Springfield"
+        },
+        {   
+            "id": "6",
+            "name": "Montgomery",
+            "lastname": "Burns",
+            "age": 145,
+            "photo": "https://i.pinimg.com/originals/d2/79/32/d27932e50416153c4eb595e72ea94600.png",
+            "Best Phrase": "Excelente!",
+            "Friends": ["Smithers"],
+            "City": "Springfield"
+        },
+        {   
+            "id": "7",
+            "name": "Waylon",
+            "lastname": "Smithers",
+            "age": 45,
+            "photo": "https://i.pinimg.com/originals/94/27/22/9427226f2f1d58de41b6ab0cf7ed51d9.jpg",
+            "Best Phrase": "Si Señor",
+            "Friends": ["Montgomery Burns"],
+            "City": "Springfield"
+        },
+        {   
+            "id": "8",
+            "name": "Marge",
+            "lastname": "Simpson",
+            "age": 55,
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVSJwlhBpGjDjS3rTSduFnxjPAVUmDj61GPA&usqp=CAU",
+            "Best Phrase": "Mmmmmmmmjjjjj",
+            "Friends": ["Maggie Simpson"],
+            "City": "Springfield"
+        },
+        {   
+            "id": "9",
+            "name": "Herschel",
+            "lastname": "Krustofsky",
+            "age": 55,
+            "photo": "https://i.pinimg.com/236x/19/9d/fa/199dfa9d85c82e9a0019ac4c8bf11683.jpg",
+            "Best Phrase": "¿Que yo me estoy quejando de los senos?",
+            "Friends": ["Mel Patiño"],
+            "City": "Springfield"
+        },
+        {   
+            "id": "10",
+            "name": "Stan",
+            "lastname": "Lee",
+            "age": 63,
+            "photo": "https://i.pinimg.com/originals/5e/fb/54/5efb54ac395fc605f2a77cce86ee3109.jpg",
+            "Best Phrase": "Yo soy el hombre verde",
+            "Friends": ["Mel Patiño"],
             "City": "Springfield"
         }
     ]

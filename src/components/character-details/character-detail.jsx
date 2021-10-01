@@ -1,35 +1,54 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./character-detail.css"
+import { useParams } from "react-router"
 import data from "../../data/characters.json"
 
-export default class CharacterDetail extends React.Component{
+export default function CharacterDetais(){
+    
+    const params  = useParams();
 
-    constructor(){
-        super()
+    const [state, setState] = useState({
+        selectedCharacter: data["Characters"][0]
+    })
 
-        this.state = {
-            selectedCharacter: data["Characters"][0]
-        }
-        console.log(this.state)
-    }
+    const [fromUri, setFromUri] = useState(false)
 
-    changeCharacter = (e) => {
-        this.setState(() => {
+    useEffect(
+        () => {
+            if(Object.keys(params).length === 0){
+                setState({
+                    selectedCharacter: data["Characters"][0]
+                })
+                console.log('dont')
+                setFromUri(false)
+            }else{
+                setState({
+                    selectedCharacter:data["Characters"].find(
+                        (character) => character.id === params.id
+                    )
+                })
+                setFromUri(true)
+            }
+        },[params]
+    )
+
+    const changeCharacter = (e) => {
+        setState(() => {
             return {
               selectedCharacter: data.Characters.find(
                 //Método que busca el objeto con el atributo nombre dentro del array
-                (character) => character.name == e.target.value
+                (character) => character.name === e.target.value
               ),
             };
         });
-         
     }
 
-    render(){
-        return (
-            <div>
+    return (
+        <div>
+            { 
+                (!fromUri) ? (
                 <div className="select" >
-                    <select name="" id="" onChange={(event) => this.changeCharacter(event)}>
+                    <select name="" id="" onChange={(event) => changeCharacter(event)}>
                     {
                         data.Characters.map((character) => (
                             <option value={character.name}>
@@ -39,20 +58,22 @@ export default class CharacterDetail extends React.Component{
                     }
                     </select>
                 </div>
-                <div className="chars">
-                    <div className="details">
-                        <p>Name: {this.state.selectedCharacter.name}</p>
-                        <p>Lastname: {this.state.selectedCharacter.lastname}</p>
-                        <p>Age: {this.state.selectedCharacter.age}</p>
-                        <p>Phrase: {this.state.selectedCharacter["Best Phrase"]}</p>
-                        <p>Friends: {this.state.selectedCharacter.Friends}</p>
-                        <p>City: {this.state.selectedCharacter.City}</p>
-                    </div>
-                    <div>
-                        <img src={this.state.selectedCharacter.photo} alt=""  className="picture"/>
-                    </div>
+                ) : (<br/>)
+            }
+            <div className="chars">
+                <div className="details">
+                    <p>Name: {state.selectedCharacter.name}</p>
+                    <p>Lastname: {state.selectedCharacter.lastname}</p>
+                    <p>Age: {state.selectedCharacter.age}</p>
+                    <p>Phrase: {state.selectedCharacter["Best Phrase"]}</p>
+                    <p>Friends: {state.selectedCharacter.Friends}</p>
+                    <p>City: {state.selectedCharacter.City}</p>
+                </div>
+                <div>
+                    <img src={state.selectedCharacter.photo} alt=""  className="picture"/>
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
+
 }

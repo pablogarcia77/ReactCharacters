@@ -1,9 +1,20 @@
 .item{
     display: inline-block;
+    background-color: rgba(0,0,0,0.6);
+    width: 12rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
 }
 .menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+}
+.white{
+    color: white;
+    text-decoration: none;
 }

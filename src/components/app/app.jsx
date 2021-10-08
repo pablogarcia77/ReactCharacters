@@ -8,6 +8,7 @@ import {
     Switch,
     Route,
   } from "react-router-dom";
+import './app.css'
 
 export default function App(){
 
@@ -20,7 +21,7 @@ export default function App(){
     },[])
 
     return (
-        <>
+        <div className="background">
             <Navbar/>
 
             <Switch>
@@ -42,6 +43,6 @@ export default function App(){
             <Home/>
             <CharacterDetail/>
             <About/> */}
-        </>
+        </div>
     )
 }

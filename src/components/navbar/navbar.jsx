@@ -10,17 +10,17 @@ export default class Navbar extends React.Component{
 
     render(){
         return (
-            <div class="menu">
-                <div class="item">
+            <div className="menu">
+                <div className="item">
                     <Link to="/">
-                        <h2>Simpsons App</h2>
+                        <h2 className="white">Simpsons App</h2>
                     </Link>
                 </div>
-                <div class="item">
-                    <Link to="/charDetail">Characters Details</Link>
+                <div className="item">
+                    <Link to="/charDetail" className="white">Characters Details</Link>
                 </div>
-                <div class="item">
-                    <Link to="/about">About</Link>
+                <div className="item">
+                    <Link to="/about" className="white">About</Link>
                 </div>
             </div>
         )

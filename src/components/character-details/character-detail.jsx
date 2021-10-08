@@ -69,8 +69,8 @@ export default function CharacterDetais(){
                     <p>Friends: {state.selectedCharacter.Friends}</p>
                     <p>City: {state.selectedCharacter.City}</p>
                 </div>
-                <div>
-                    <img src={state.selectedCharacter.photo} alt=""  className="picture"/>
+                <div className="picture">
+                    <img src={state.selectedCharacter.photo} alt="" className="in-picture"/>
                 </div>
             </div>
         </div>

@@ -44,7 +44,7 @@ export default function CharacterDetais(){
     }
 
     return (
-        <div>
+        <div className="h-100">
             { 
                 (!fromUri) ? (
                 <div className="select" >

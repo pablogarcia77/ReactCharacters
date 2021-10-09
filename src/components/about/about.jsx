@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import './about.css';
 
 export function validators(input){
     let errors = {}
@@ -54,27 +55,29 @@ export default function About(){
     }
         return (
             <>
-                <div>
+                <div className="about">
                     <h3>Acerca del creador</h3>
                     <p>Pablo Garcia</p>
                     <p>Estudiante del último año de la carrera Analista Progrmador Univesitario, trabajando actualmente como desarrollador Freelance y encargado del área IT de la empresa RB Equipamientos Comerciales.</p>
                     <div>
-                        <form action="">
-                            <div>
-                                <label for="email">Email:</label>
-                                <input type="text" id="email" name="email" value={state.email} onChange={(e) => onHandleChange(e)}/>
-                                {fails.email ? <p style={{color: 'red'}}> {fails.email}</p> : <p>Todo ok </p>}
+                        <form action="" className="form">
+                            <div className="contact-head">
+                                <div>
+                                    <label for="email">Email:</label>
+                                    <input type="text" id="email" name="email" value={state.email} onChange={(e) => onHandleChange(e)}/>
+                                    {fails.email ? <p style={{color: 'red'}}> {fails.email}</p> : <p>Todo ok </p>}
+                                </div>
+                                <div>
+                                    <label for="asunto">Asunto:</label>
+                                    <input type="text" id="asunto" name="asunto" value={state.asunto} onChange={(e) => onHandleChange(e)}/>
+                                    {fails.asunto ? <p style={{color: 'red'}}> {fails.asunto}</p> : <p>Todo ok </p>}
+                                </div>
                             </div>
                             <div>
-                                <label for="asunto">Asunto:</label>
-                                <input type="text" id="asunto" name="asunto" value={state.asunto} onChange={(e) => onHandleChange(e)}/>
-                                {fails.asunto ? <p style={{color: 'red'}}> {fails.asunto}</p> : <p>Todo ok </p>}
-                            </div>
-                            <div>
-                                <textarea name="mensaje" id="mensaje" cols="30" rows="10" onChange={(e) => onHandleChange(e)}>Escriba su mensaje...</textarea>
+                                <textarea name="mensaje" id="mensaje" cols="30" rows="10" className="text-area" onChange={(e) => onHandleChange(e)}>Escriba su mensaje...</textarea>
                                 {fails.mensaje ? <p style={{color: 'red'}}> {fails.mensaje}</p> : <p>Todo ok </p>}
                             </div>
-                            <button type="submit" disabled={ fails.email || fails.asunto || fails.mensaje ? true : false  }>Enviar</button>
+                            <button type="submit" className="button" disabled={ fails.email || fails.asunto || fails.mensaje ? true : false  }>Enviar</button>
                         </form>
                     </div>
                 </div>

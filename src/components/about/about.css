@@ -1,0 +1,24 @@
+.about{
+    padding: 50px;
+    padding-bottom: 420px;
+}
+.button{
+    background-color: rgba(0,0,0,.25);
+    border: solid 1px rgba(0,0,0,.25);
+    border-radius: 5rem;
+    height: 40px;
+    width: 150px;
+    font-size: 1.2rem;
+}
+.contact-head{
+    display: flex;
+    justify-content: space-around;
+}
+.text-area{
+    width: 100%;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
